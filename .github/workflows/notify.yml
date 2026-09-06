@@ -1,6 +1,8 @@
 name: Vivillon Friend Notification
 
 on:
+  workflow_dispatch:
+  
   schedule:
     - cron: "*/10 * * * *"
 
