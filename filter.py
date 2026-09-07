@@ -5,7 +5,7 @@ def within_15minutes(time_text):
     
     if match:
         minutes = int(match.group(1))
-        return minutes <= 15
+        return minutes <= 30
     elif time_text == "just now":
         return True  
     elif time_text == "a minute ago":
