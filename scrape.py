@@ -18,8 +18,16 @@ def scrape_latest_codes():
         tds = i.find_all("td")
         trainer_code = tds[0].contents[0].strip()
         time = tds[0].find("span").text.strip()
-        country = tds[1].find("img").get("alt")
-        vivillon = tds[2].find("img").get("alt")
+        img1 = tds[1].find("img")
+        if img1:
+            country = img1.get("alt") 
+        else:
+            country = None
+        img2 = tds[2].find("img")
+        if img2:
+            vivillon = img2.get("alt")
+        else:
+            vivillon = None
 
         if within_15minutes(time):
 
