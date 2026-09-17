@@ -29,7 +29,7 @@ def scrape_latest_codes():
         else:
             vivillon = None
 
-        if within_15minutes(time):
+        if within_15minutes(time) and country is not None and vivillon is not None:
 
             post = {
                 "trainer_code": trainer_code,
