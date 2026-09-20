@@ -1,7 +1,6 @@
 from scrape import scrape_latest_codes
-from target import get_target_vivillons
+from target import get_target_vivillons, get_rare_countries, get_excluded_countries
 from user import get_users
-from country import get_rare_countries, get_excluded_countries
 from notification import send
 from insert import save_post
 
