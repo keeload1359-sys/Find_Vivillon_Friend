@@ -7,6 +7,13 @@ from insert import save_post
 def main():
     users = get_users()
     posts = scrape_latest_codes()
+
+    new_posts = []
+
+    for post in posts:
+        if save_post(post):
+            new_posts.append(post)
+
     rare_countries = get_rare_countries()
 
     for user in users:
@@ -15,7 +22,7 @@ def main():
         target_vivillons = get_target_vivillons(user_id)
         excluded_countries = get_excluded_countries(user_id)
 
-        for i in posts:
+        for i in new_posts:
             if save_post(i):         
 
                 if i["vivillon"] in target_vivillons:
