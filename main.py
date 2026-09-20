@@ -23,16 +23,15 @@ def main():
         excluded_countries = get_excluded_countries(user_id)
 
         for i in new_posts:
-            if save_post(i):         
 
-                if i["vivillon"] in target_vivillons:
-                    send(user["discord_webhook_url"], i)
+            if i["vivillon"] in target_vivillons:
+                send(user["discord_webhook_url"], i)
 
-                elif i["country"] in excluded_countries:
-                    continue
+            elif i["country"] in excluded_countries:
+                continue
 
-                elif i["country"] in rare_countries:
-                    send(user["discord_webhook_url"], i)
+            elif i["country"] in rare_countries:
+                send(user["discord_webhook_url"], i)
 
 if __name__ == "__main__":
     main()
