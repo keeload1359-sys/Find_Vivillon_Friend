@@ -1,15 +1,6 @@
-from supabase import create_client
 from estimate import estimate_time, create_post_time_range
 from postgrest.exceptions import APIError
-import os
-from dotenv import load_dotenv
-
-load_dotenv()
-
-SUPABASE_URL = os.getenv("SUPABASE_URL")
-SUPABASE_KEY = os.getenv("SUPABASE_KEY")
-
-supabase = create_client(SUPABASE_URL, SUPABASE_KEY)
+from supabase_client import supabase
 
 def save_post(post):
     estimated_time = estimate_time(post["time"])

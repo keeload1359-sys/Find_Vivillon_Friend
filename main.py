@@ -1,18 +1,31 @@
 from scrape import scrape_latest_codes
-from target import target, get_users
+from target import get_target_vivillons
+from user import get_users
+from country import get_rare_countries, get_excluded_countries
 from notification import send
 from insert import save_post
 
 def main():
     users = get_users()
     posts = scrape_latest_codes()
+    rare_countries = get_rare_countries()
 
-    for i in posts:
-        if save_post(i):         
-            for user in users:
-                user_id = user["user_id"]
+    for user in users:
+        user_id = user["user_id"]
 
-                if target(i, user_id):
+        target_vivillons = get_target_vivillons(user_id)
+        excluded_countries = get_excluded_countries(user_id)
+
+        for i in posts:
+            if save_post(i):         
+
+                if i["vivillon"] in target_vivillons:
+                    send(user["discord_webhook_url"], i)
+
+                elif i["country"] in excluded_countries:
+                    continue
+
+                elif i["country"] in rare_countries:
                     send(user["discord_webhook_url"], i)
 
 if __name__ == "__main__":
