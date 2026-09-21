@@ -19,6 +19,27 @@ VIVILLON_NAMES = {
     "JG": "ジャングル",
 }
 
+VIVILLON_IMAGE_URLS = {
+    "IS": "https://veekun.com/dex/media/pokemon/sugimori/666-icy-snow.png",
+    "TD": "https://veekun.com/dex/media/pokemon/sugimori/666-tundra.png",
+    "PL": "https://veekun.com/dex/media/pokemon/sugimori/666-polar.png",
+    "CN": "https://veekun.com/dex/media/pokemon/sugimori/666-continental.png",
+    "GD": "https://veekun.com/dex/media/pokemon/sugimori/666-garden.png",
+    "EG": "https://veekun.com/dex/media/pokemon/sugimori/666-elegant.png",
+    "MW": "https://veekun.com/dex/media/pokemon/sugimori/666-meadow.png",
+    "MD": "https://veekun.com/dex/media/pokemon/sugimori/666-modern.png",
+    "MR": "https://veekun.com/dex/media/pokemon/sugimori/666-marine.png",
+    "AP": "https://veekun.com/dex/media/pokemon/sugimori/666-archipelago.png",
+    "HP": "https://veekun.com/dex/media/pokemon/sugimori/666-high-plains.png",
+    "SS": "https://veekun.com/dex/media/pokemon/sugimori/666-sandstorm.png",
+    "RV": "https://veekun.com/dex/media/pokemon/sugimori/666-river.png",
+    "MO": "https://veekun.com/dex/media/pokemon/sugimori/666-monsoon.png",
+    "SV": "https://veekun.com/dex/media/pokemon/sugimori/666-savanna.png",
+    "SN": "https://veekun.com/dex/media/pokemon/sugimori/666-sun.png",
+    "OC": "https://veekun.com/dex/media/pokemon/sugimori/666-ocean.png",
+    "JG": "https://veekun.com/dex/media/pokemon/sugimori/666-jungle.png",
+}
+
 COUNTRY_NAMES = {
     "ad": "アンドラ",
     "ae": "アラブ首長国連邦",
